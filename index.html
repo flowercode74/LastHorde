@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Village</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= TOP BAR ================= -->
+
+    <div id="top-bar">
+
+        <div id="player-info">
+
+            <div id="avatar-frame">
+
+                <img
+                    id="avatar"
+                    src="Images/Avatar.jpg"
+                    alt="avatar">
+
+            </div>
+
+            <div id="player-details">
+
+                <div id="player-name">
+                    Pouria
+                </div>
+
+                <div id="player-alliance">
+                    🛡️ Warriors
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="player-status">
+
+            <div id="player-power">
+
+                🏆 Honor Point : 25,000
+
+            </div>
+
+            <div id="resources">
+
+                <div class="resource">
+                    🐟
+                    <span>ماهی</span>
+                    <b>500</b>
+                </div>
+
+                <div class="resource">
+                    🧱
+                    <span>چوب</span>
+                    <b>800</b>
+                </div>
+
+                <div class="resource">
+                    🥔
+                    <span>سنگ</span>
+                    <b>600</b>
+                </div>
+
+                <div class="resource">
+                    ⚙️
+                    <span>آهن</span>
+                    <b>300</b>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button type="button" id="menu-btn">
+
+            ☰
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= GAME AREA ================= -->
+
+    <div id="viewport">
+
+        <div id="game-area">
+
+            <!-- ================= VILLAGE ================= -->
+
+            <div id="village-view">
+
+                <div id="world">
+
+                    <img
+                        id="map"
+                        src="Images/Map.png">
+
+                    <div class="building castle">
+                        <span class="building-name">قلعه</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building guild">
+                        <span class="building-name">گیلد</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building wall">
+                        <span class="building-name">دیوار</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building barracks">
+                        <span class="building-name">سربازخانه</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building camp">
+                        <span class="building-name">اردوگاه</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building talent">
+                        <span class="building-name">مرکز تحقیقات</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building hospital">
+                        <span class="building-name">بیمارستان</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building market">
+                        <span class="building-name">بازار</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building iron">
+                        <span class="building-name">معدن آهن</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building stone">
+                        <span class="building-name">کارگاه سنگ</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building fish">
+                        <span class="building-name">ماهیگیری</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                    <div class="building wood">
+                        <span class="building-name">چوب بری</span>
+                        <span class="building-level">Lv.10</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+         
+
+             <div id="inventory-overlay">
+
+                    <div id="inventory-window">
+
+                        <div id="inventory-header">
+
+                            <span>آیتم ها</span>
+
+                            <button id="close-inventory">✕</button>
+
+                        </div>
+
+                        <div id="inventory-grid">
+
+                        </div>
+
+                    </div>
+
+            </div>
+
+
+            <div id="item-popup">
+
+                <div id="item-popup-box">
+
+                <div id="item-amount-selector">
+
+                    <button id="minus-item">-</button>
+
+                    <span id="selected-amount">1</span>
+
+                    <button id="plus-item">+</button>
+
+                </div>
+
+                <div id="item-total-reward">
+
+                </div>
+
+                        <div id="item-popup-title">
+                            آیتم
+                        </div>
+
+                        <div id="item-popup-icon">
+                            🐟
+                        </div>
+
+                        <div id="item-popup-info">
+
+                        </div>
+
+                        <button id="use-item-btn">
+                            استفاده
+                        </button>
+
+                        <button id="close-item-popup">
+                            بستن
+                        </button>
+
+                 </div>
+
+</div>
+
+    <div id="troop-overlay">
+
+    <div id="troop-window">
+
+
+        <div id="troop-header">
+
+            <span>
+                نیروها
+            </span>
+
+            <button id="closeTroopPopup">
+                ✕
+            </button>
+
+        </div>
+
+
+        <div id="troopGrid">
+
+
+            <div class="troop-card">
+
+                <img src="Images/soldier.png">
+
+                <div class="troop-name">
+                    سرباز پیاده
+                </div>
+
+                <div class="troop-count">
+                    120
+                </div>
+
+            </div>
+
+
+            <div class="troop-card">
+
+                <img src="Images/archer.png">
+
+                <div class="troop-name">
+                    کماندار
+                </div>
+
+                <div class="troop-count">
+                    50
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>            
+
+            <!-- ================= WORLD MAP ================= -->
+
+            <div id="world-map-view">
+
+                <button id="back-village">
+
+                    🏠
+
+                </button>
+
+                <div id="world-grid"></div>
+                
+                 <div id="world-objects"></div>
+
+            </div>
+
+
+
+            <!-- ================= FUTURE VIEWS ================= -->
+
+            <div id="army-view"></div>
+
+            <div id="inventory-view"></div>
+
+            <div id="settings-view"></div>
+
+
+            <!-- ================= MESSAGES VIEW ================= -->
+
+        <div id="messages-view">
+
+
+            <div id="messages-panel">
+
+
+                <div id="messages-tabs">
+
+
+                    <button class="message-tab active">
+                        پیام خصوصی
+                    </button>
+
+
+                    <button class="message-tab">
+                         گیلد چت
+                    </button>
+
+
+                    <button class="message-tab">
+                         گزارش نبرد
+                    </button>
+
+
+                    <button class="message-tab">
+                         دوستان
+                    </button>
+
+
+                    <button class="message-tab">
+                        پیام سیستم 
+                    </button>
+
+                    <button class="message-tab">
+                        گزارش جاسوسی
+                    </button>
+
+
+                </div>
+
+
+
+                <div id="messages-content">
+
+
+                    <div class="message-empty">
+
+                        پیامی وجود ندارد
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        </div>
+
+    </div>
+
+    
+    <!-- ================= BOTTOM BAR ================= -->
+    <div id="army-tab">
+        ⚔
+    </div>
+
+
+    <div id="army-panel">
+
+        <div class="army-row">
+
+            <div class="army-progress">
+                <span>لشکر بیکار</span>
+            </div>
+
+            <div class="army-time">
+                --
+            </div>
+
+        </div>
+
+
+        <div class="army-row">
+
+            <div class="army-progress">
+                <span>لشکر بیکار</span>
+            </div>
+
+            <div class="army-time">
+                --
+            </div>
+
+        </div>
+
+
+        <div class="army-row">
+
+            <div class="army-progress">
+                <span>لشکر بیکار</span>
+            </div>
+
+            <div class="army-time">
+                --
+            </div>
+
+        </div>
+
+
+        <div class="army-row">
+
+            <div class="army-progress">
+                <span>لشکر بیکار</span>
+            </div>
+
+            <div class="army-time">
+                --
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="bottom-bar">
+
+        <button
+
+            id="messages-button"
+            class="menu-btn"
+            data-tooltip="پیام ها">
+
+            <img src="Images/chaticon.png">  پیام ها
+
+        </button>
+
+        <button
+            id="troopsButton"
+            class="menu-btn"
+            data-tooltip="لیست سربازانی که دارید">
+
+            <img src="Images/troopsicon.png"> نیرو ها
+
+        </button>
+
+        <button
+            class="menu-btn map-btn"
+            id="map-button"
+            data-tooltip="نقشه">
+
+            <img src="Images/mapicon.png">
+
+        </button>
+
+        <button
+                class="menu-btn"
+                id="inventory-btn"
+                data-tooltip="لیست آیتم ها">
+
+                <img src="Images/inventoryicon.png"> آیتم ها
+
+        </button>
+
+        <button
+            class="menu-btn"
+            id="village-button"
+            data-tooltip="شهر">
+
+            <img src="Images/villageicon.png"> قلمرو
+
+        </button>
+
+    </div>
+
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>
